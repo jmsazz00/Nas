@@ -1,0 +1,17 @@
+[
+    {
+        "src" : "../images/shirt.jpg",
+        "text": "On a regular October day, you offered me that pink shirt; at first it didnt mean that much to me. Thought once worn, it did leave a great impact on me(need to BUY it).",
+        "type": "img"
+    },
+    {
+        "src" : "../images/fish.jpg",
+        "text": "Fish have always been one of the things that unite us. Here's one of many shared fish pics between us. Eager to go with you fishing one day(+ dump you in the sea drowned)!",
+        "type": "img"
+    },
+    {
+        "src" : "../images/antoine.mp3",
+        "text": "Whenever i feel low or lose hope, my refuge remains you aahra, who always exhort/reassure me and draw that smile on my face.",
+        "type": "audio"
+    }
+]
