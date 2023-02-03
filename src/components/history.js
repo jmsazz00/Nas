@@ -15,7 +15,7 @@ const History = () => {
     <section id="history" className="block">
       <div className="history-block container domain">
         <header className="block__header history__header">
-          <h1 className="block__heading history__heading">
+          <h1 className="block__heading history__heading" data-aos="fade-down">
             <span className="number-badge number-badge--primary">1</span>
             <p>{msg}</p>
           </h1>

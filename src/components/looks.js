@@ -9,7 +9,7 @@ const Looks = () => {
     <section id="looks" className="block block--mixedgray">
       <div className="looks-block domain">
         <header className="block__header">
-          <h1 className="block__heading">
+          <h1 className="block__heading" data-aos="fade-down">
             <span className="number-badge number-badge--primary">3</span>
             <p>{msg}</p>
           </h1>

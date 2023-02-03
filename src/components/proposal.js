@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { useCapitalizer } from "./../hooks/useCapitalizer";
 import cmds from "../commands.json";
@@ -28,6 +28,10 @@ function Proposal(props) {
     else toast.error("Bteswe ay*e");
   };
 
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <section className="block block--stone">
       <div className="proposal-block container">
@@ -43,7 +47,11 @@ function Proposal(props) {
             gigantic limestone. He then pleaded mankind to follow them in their
             daily lives; here they are:
           </p>
-          <div class="proposal__commands" data-aos="zoom-in" data-aos-duration="1000">
+          <div
+            class="proposal__commands"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <ol className="proposal__list">
               {cmds.map((cmd, ind) => {
                 let className = "";

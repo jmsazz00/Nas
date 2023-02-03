@@ -26,7 +26,7 @@ const Memories = () => {
     <section id="memories" className="block block--skewed-left block--dark">
       <div className="memories-block domain">
         <header className="block__header memories__header">
-          <h1 className="block__heading history__heading">
+          <h1 className="block__heading history__heading" data-aos="fade-down">
             <span className="number-badge number-badge--primary">2</span>
             <p>{msg}</p>
           </h1>
