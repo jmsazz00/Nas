@@ -169,7 +169,7 @@ h3 {
   background-image: url(./images/hero1@328.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 21% 0%;
+  background-position: 20% 0%;
   border-radius: var(--border-radius-min);
   border: 2px solid #97979a;
   box-shadow: 0 0 30px 25px #bbbbcc;
@@ -595,10 +595,6 @@ audio::-webkit-media-controls-panel {
   transition: all 0.15s ease-in;
 }
 
-.looks__block:nth-of-type(2) .looks__img {
-  background-position: 15% 0%;
-}
-
 .looks__img:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -648,10 +644,6 @@ audio::-webkit-media-controls-panel {
 
   .looks__block:nth-of-type(2) {
     flex-direction: row-reverse;
-  }
-
-  .looks__block:nth-of-type(2) .looks__img {
-    background-position: initial;
   }
 
   .looks__text {
@@ -794,6 +786,8 @@ audio::-webkit-media-controls-panel {
 
 .proposal__hist {
   margin-bottom: 5rem !important;
+  border-top: 1.8px dashed #bbb;
+  border-bottom: 1.8px dashed #bbb;
 }
 
 .proposal__commands {
