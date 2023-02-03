@@ -28,7 +28,10 @@ function Energizer(props) {
               I hope you learn that Timing is always prominent: don't rush
               things; Trust the process.
               <br />
-              Remember: "Patience is KEY".
+              <span style={{ textDecoration: "underline" }}>
+                Remember:
+              </span>{" "}
+              "Patience is KEY".
             </p>
             <p
               className="surp__nick"
