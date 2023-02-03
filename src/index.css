@@ -169,7 +169,7 @@ h3 {
   background-image: url(./images/hero1@328.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 25% 0%;
+  background-position: 21% 0%;
   border-radius: var(--border-radius-min);
   border: 2px solid #97979a;
   box-shadow: 0 0 30px 25px #bbbbcc;
@@ -585,7 +585,7 @@ audio::-webkit-media-controls-panel {
 }
 
 .looks__img {
-  height: 70vh;
+  height: 65vh;
   width: 95%;
   border-radius: var(--border-radius-min);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
@@ -593,6 +593,10 @@ audio::-webkit-media-controls-panel {
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   overflow: hidden;
   transition: all 0.15s ease-in;
+}
+
+.looks__block:nth-of-type(2) .looks__img {
+  background-position: 15% 0%;
 }
 
 .looks__img:hover {
@@ -644,6 +648,10 @@ audio::-webkit-media-controls-panel {
 
   .looks__block:nth-of-type(2) {
     flex-direction: row-reverse;
+  }
+
+  .looks__block:nth-of-type(2) .looks__img {
+    background-position: initial;
   }
 
   .looks__text {
@@ -800,7 +808,7 @@ audio::-webkit-media-controls-panel {
   border-radius: 10px;
   text-align: center;
   position: relative;
-  margin-bottom: 37rem;
+  margin-bottom: 40rem;
 }
 
 .proposal__commands::after {
@@ -808,7 +816,7 @@ audio::-webkit-media-controls-panel {
   content: "--->";
   rotate: 90deg;
   left: 40%;
-  bottom: -220px;
+  bottom: -234px;
   color: gold;
   font-size: 8rem;
 }
