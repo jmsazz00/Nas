@@ -24,7 +24,7 @@ function Proposal(props) {
     e.preventDefault();
 
     console.log(answer);
-    if (answer === "yes") toast.success("Love you Nas!");
+    if (answer === "yes") toast.success("I'll think about it...");
     else toast.error("Bteswe ay*e");
   };
 
