@@ -36,10 +36,10 @@ const Looks = () => {
               <img src="../images/ce.jpg" />
             </picture>
             <p className="looks__text" data-aos="fade-right">
-              Nas, an elegant woman, fulfilling her dream and working as a
-              computer scientist in one of the most renowned companies of the
-              world (Microsoft/Amazon), earning an average of $200K/year; which
-              is still kinda low for her majesty&#128522;.
+              Nas, an elegant dignified woman, fulfilling her dream and working
+              as a chief executive officer (CEO) in one of the most renowned
+              companies in the world, earning an average of $200K/year; which is
+              still kinda low for her majesty&#128522;.
               <span className="right--arrow">-&gt;</span>
             </p>
           </div>

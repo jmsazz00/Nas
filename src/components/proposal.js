@@ -42,10 +42,10 @@ function Proposal(props) {
         </header>
         <div className="proposal__intro">
           <p className="proposal__hist" data-aos="fade-left">
-            -&gt; On Mount Sinaa' in Egypt, Moses encountered the sacred
+            //&nbsp; On Mount Sinaa' in Egypt, Moses encountered the sacred
             commandments, thought to be descended from God himself, carved on a
             gigantic limestone. He then pleaded mankind to follow them in their
-            daily lives; here they are:
+            daily lives; here they are: &nbsp;//
           </p>
           <div
             class="proposal__commands"
