@@ -45,7 +45,7 @@ function Proposal(props) {
             //&nbsp; On Mount Sinaa' in Egypt, Moses encountered the sacred
             commandments, thought to be descended from God himself, carved on a
             gigantic limestone. He then pleaded mankind to follow them in their
-            daily lives; here they are: &nbsp;//
+            daily lives; here they are:
           </p>
           <div
             class="proposal__commands"
