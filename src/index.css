@@ -1026,3 +1026,72 @@ input[type="radio"] {
     gap: 0;
   }
 }
+
+/* Emojis  */
+
+#head-up {
+  position: fixed;
+  background-color: #666;
+  color: #ccc;
+  bottom: 25px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  rotate: 180deg;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#head-up:hover {
+  opacity: 1 !important;
+}
+
+#head-up:hover span {
+  transform: translateY(1px);
+  color: #fff;
+}
+
+.likes {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 50px;
+  right: 0;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 20px 15px #ccc;
+}
+
+.likes:nth-of-type(2) {
+  left: 0;
+}
+
+.success {
+  background-color: rgb(0, 157, 255);
+}
+
+.success:nth-of-type(2) {
+  transform: rotateY(0);
+}
+
+.error {
+  background-color: var(--color-accent);
+  transform: rotate(180deg);
+}
+
+.error:nth-of-type(2) {
+  transform: rotateX(180deg);
+}
+
+.like-move-right {
+  opacity: 1;
+  right: 25px;
+}
+
+.like-move-left {
+  opacity: 1;
+  left: 25px;
+}

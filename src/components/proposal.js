@@ -1,19 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import { useCapitalizer } from "./../hooks/useCapitalizer";
+import { AiFillLike } from "react-icons/ai";
 import cmds from "../commands.json";
 
 function Proposal(props) {
   let heading = "The sacred commands";
   let msg = useCapitalizer(heading);
+  let left = useRef();
+  let right = useRef();
 
   let [index, setIndex] = useState(0);
   let [showQuest, setShowQuest] = useState(false);
   let [answer, setAnswer] = useState("");
 
+  const style = { color: "#fff", fontSize: "3em" };
+
   let handleClick = () => {
     setIndex(index + 1);
-    if (index === cmds.length - 2) setShowQuest(true);
+    if (index === cmds.length - 2) {
+      setShowQuest(true);
+      setTimeout(() => {
+        window.scrollBy(0, window.screen.height);
+      }, 4500);
+    }
   };
 
   let handleInput = (ev) => {
@@ -22,10 +32,30 @@ function Proposal(props) {
 
   let handleSubmit = (e) => {
     e.preventDefault();
+    let leftElement = left.current.classList;
+    let rightElement = right.current.classList;
 
-    console.log(answer);
-    if (answer === "yes") toast.success("I'll think about it...");
-    else toast.error("Bteswe ay*e");
+    if (answer === "yes") toast.success("I'll think about it..");
+    else toast.error("Bteswe ayre");
+
+    if (answer === "yes") {
+      if (leftElement.contains("error")) {
+        leftElement.remove("error");
+        rightElement.remove("error");
+      }
+      leftElement.add("success");
+      rightElement.add("success");
+    } else {
+      if (leftElement.contains("success")) {
+        leftElement.remove("success");
+        rightElement.remove("success");
+      }
+      leftElement.add("error");
+      rightElement.add("error");
+    }
+
+    leftElement.add("like-move-left");
+    rightElement.add("like-move-right");
   };
 
   useEffect(() => {
@@ -48,7 +78,7 @@ function Proposal(props) {
             daily lives; here they are:
           </p>
           <div
-            class="proposal__commands"
+            className="proposal__commands"
             data-aos="zoom-in"
             data-aos-duration="1000"
           >
@@ -74,13 +104,19 @@ function Proposal(props) {
           </div>
         </div>
         {showQuest && (
-          <div>
-            <div class="proposal__quest" data-aos="zoom-in">
+          <div style={{ position: "relative" }}>
+            <span className="likes icon-container" ref={right}>
+              <AiFillLike style={style} />
+            </span>
+            <span className="likes icon-container" ref={left}>
+              <AiFillLike style={style} />
+            </span>
+            <div className="proposal__quest" data-aos="zoom-in">
               <h1>Will you LIGHT UP my night at prom?</h1>
             </div>
-            <form onSubmit={handleSubmit} class="proposal__ans">
-              <div class="proposal__options">
-                <div class="form-group" data-aos="fade-right">
+            <form onSubmit={handleSubmit} className="proposal__ans">
+              <div className="proposal__options">
+                <div className="form-group" data-aos="fade-right">
                   <input
                     content="yes"
                     onChange={(ev) => handleInput(ev)}
@@ -91,7 +127,7 @@ function Proposal(props) {
                   <label htmlFor="opt1">Yes</label>
                 </div>
                 <span>OR</span>
-                <div class="form-group" data-aos="fade-left">
+                <div className="form-group" data-aos="fade-left">
                   <input
                     content="no"
                     onChange={(ev) => handleInput(ev)}

@@ -16,7 +16,7 @@ function Energizer(props) {
           </h1>
         </header>
         <div className="surp__content">
-          <div class="surp__text">
+          <div className="surp__text">
             <p
               className="surp__nick"
               data-aos="fade-right"
