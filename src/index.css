@@ -1055,8 +1055,8 @@ input[type="radio"] {
 
 .likes {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 30px;
+  height: 30px;
   bottom: 50px;
   right: 0;
   opacity: 0;
@@ -1094,4 +1094,11 @@ input[type="radio"] {
 .like-move-left {
   opacity: 1;
   left: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+  .likes {
+    width: 80px;
+    height: 80px;
+  }
 }
