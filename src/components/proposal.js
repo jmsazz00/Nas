@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import { useCapitalizer } from "./../hooks/useCapitalizer";
 import { AiFillLike } from "react-icons/ai";
+import { BsArrowDown } from "react-icons/bs";
 import cmds from "../commands.json";
 
 function Proposal(props) {
@@ -14,7 +15,7 @@ function Proposal(props) {
   let [showQuest, setShowQuest] = useState(false);
   let [answer, setAnswer] = useState("");
 
-  const style = { color: "#fff", fontSize: "3em" };
+  const style = { color: "#fff", fontSize: "4em" };
 
   let handleClick = () => {
     setIndex(index + 1);
@@ -35,27 +36,32 @@ function Proposal(props) {
     let leftElement = left.current.classList;
     let rightElement = right.current.classList;
 
-    if (answer === "yes") toast.success("I'll think about it..");
-    else toast.error("Bteswe ayre");
-
     if (answer === "yes") {
-      if (leftElement.contains("error")) {
-        leftElement.remove("error");
-        rightElement.remove("error");
-      }
-      leftElement.add("success");
-      rightElement.add("success");
+      if (leftElement.contains("error")) lrAction("error", "rem");
+
+      lrAction("success", "add");
+      toast.success("I'll think about it..");
     } else {
-      if (leftElement.contains("success")) {
-        leftElement.remove("success");
-        rightElement.remove("success");
-      }
-      leftElement.add("error");
-      rightElement.add("error");
+      if (leftElement.contains("success")) lrAction("success", "rem");
+      lrAction("error", "add");
+      toast.error("Bteswe ay*e");
     }
 
     leftElement.add("like-move-left");
     rightElement.add("like-move-right");
+  };
+
+  let lrAction = (exp, action) => {
+    let leftElement = left.current.classList;
+    let rightElement = right.current.classList;
+
+    if (action === "rem") {
+      leftElement.remove(exp);
+      rightElement.remove(exp);
+    } else if (action === "add") {
+      leftElement.add(exp);
+      rightElement.add(exp);
+    }
   };
 
   useEffect(() => {
@@ -101,6 +107,7 @@ function Proposal(props) {
                 <a href={"#cmd" + (index - 1)}>Next</a>
               </button>
             )}
+            <BsArrowDown className="arrow" style={style} />
           </div>
         </div>
         {showQuest && (
@@ -112,7 +119,9 @@ function Proposal(props) {
               <AiFillLike style={style} />
             </span>
             <div className="proposal__quest" data-aos="zoom-in">
-              <h1>Will you LIGHT UP my night at prom?</h1>
+              <h1 className="no-highlight">
+                Will you LIGHT UP my night at prom?
+              </h1>
             </div>
             <form onSubmit={handleSubmit} className="proposal__ans">
               <div className="proposal__options">
@@ -124,7 +133,7 @@ function Proposal(props) {
                     type="radio"
                     id="opt1"
                   ></input>
-                  <label htmlFor="opt1">Yes</label>
+                  <label htmlFor="opt1">YES</label>
                 </div>
                 <span>OR</span>
                 <div className="form-group" data-aos="fade-left">
@@ -135,7 +144,7 @@ function Proposal(props) {
                     type="radio"
                     id="opt2"
                   ></input>
-                  <label htmlFor="opt2">No</label>
+                  <label htmlFor="opt2">NO</label>
                 </div>
               </div>
               <button

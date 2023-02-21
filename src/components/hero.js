@@ -8,7 +8,7 @@ const Hero = () => {
           <h1
             data-aos="fade-left"
             data-aos-duration="1200"
-            className="hero__header"
+            className="hero__header no-highlight"
           >
             An Intimate Friendship..
           </h1>
