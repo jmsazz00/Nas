@@ -201,7 +201,7 @@ h3 {
   font-size: 3.4rem;
   rotate: 90deg;
   position: absolute;
-  left: 45%;
+  left: 40%;
   bottom: -50px;
 }
 
@@ -678,7 +678,7 @@ audio::-webkit-media-controls-panel {
 @media (orientation: landscape) {
   .looks__block {
     flex-direction: row;
-    height: 70vh;
+    height: 60vh;
     gap: 8rem;
     margin-bottom: 6rem;
   }
@@ -856,7 +856,7 @@ audio::-webkit-media-controls-panel {
   border-radius: 10px;
   text-align: center;
   position: relative;
-  margin-bottom: 40rem;
+  margin-bottom: 70vh;
   box-shadow: rgb(225, 180, 33) 0px 6px 12px -2px,
     rgb(225, 180, 33) 0px 3px 7px -3px;
 }
@@ -875,7 +875,7 @@ audio::-webkit-media-controls-panel {
 .arrow {
   position: absolute;
   left: 42%;
-  bottom: -200px;
+  bottom: -45vh;
   fill: gold;
 }
 
@@ -1013,12 +1013,14 @@ input[type="radio"] {
 
   .proposal__hist,
   .proposal__commands {
-    margin: 0 auto 30rem;
-    width: 80%;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 74%;
   }
 
   .proposal__quest {
-    width: 75%;
+    max-width: 72%;
     margin: 0 auto;
   }
 

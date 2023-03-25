@@ -23,7 +23,7 @@ function Proposal(props) {
       setShowQuest(true);
       setTimeout(() => {
         window.scrollBy(0, window.screen.height);
-      }, 4000);
+      }, 3000);
     }
   };
 
