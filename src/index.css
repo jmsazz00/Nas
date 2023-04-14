@@ -1047,10 +1047,6 @@ input[type="radio"] {
   transition: opacity 0.4s ease;
 }
 
-#head-up:hover {
-  opacity: 1 !important;
-}
-
 #head-up:hover span {
   transform: translateY(1px);
   color: #fff;

@@ -1,35 +1,36 @@
 import React, { useEffect } from "react";
 
 function HeadUp(props) {
+  let div = document.getElementById("head-up");
+
+  let lastKnownScrollPosition = 0,
+    lastScrollTop = 0;
+  let ticking = false;
+
   useEffect(() => {
-    let lastKnownScrollPosition = 0;
-    let ticking = false;
+    document.addEventListener(
+      "scroll",
+      () => {
+        lastKnownScrollPosition = window.scrollY;
+        let st = window.pageYOffset || document.documentElement.scrollTop;
 
-    function doSomething(scrollPos) {
-      let div = document.getElementById("head-up");
-      if (scrollPos > window.innerHeight) {
-        div.style.opacity = "1";
+        if (!ticking) {
+          let show =
+            lastKnownScrollPosition > window.innerHeight && st > lastScrollTop;
+          window.requestAnimationFrame(() =>
+            setTimeout(() => {
+              if (show) div.style.opacity = "1";
+              else div.style.opacity = "0";
+              ticking = false;
+            }, 100)
+          );
 
-        setTimeout(() => {
-          div.style.opacity = "0";
-        }, 5000);
-      } else {
-        div.style.opacity = "0";
-      }
-    }
-
-    document.addEventListener("scroll", (event) => {
-      lastKnownScrollPosition = window.scrollY;
-
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          doSomething(lastKnownScrollPosition);
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-    });
+          ticking = true;
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+      },
+      false
+    );
   }, []);
 
   return (
