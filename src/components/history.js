@@ -32,9 +32,9 @@ const History = () => {
               <p className="media__text">
                 Who would ever think that by -RANDOMLY- sitting next to a boy
                 during an english hour on Monday morning at school, a girl would
-                develop such a firm substantial bond with him; he who can't even
-                imagine how his life would be if this connection got aborted one
-                day (sincerely dreading that day).
+                develop such a firm substantial bond with him; he who keeps
+                clinging on to her and won't bear if this connection got aborted
+                one day (sincerely dreading that day).
               </p>
             </div>
           </div>
@@ -47,11 +47,11 @@ const History = () => {
             <div className="media__content">
               <h3 className="media__title">An Angelic Impression</h3>
               <p className="media__text">
-                Having found numerous goals in common, our two friends gradually
-                begin to strengthen their familiarity by each day passing,
-                although the boy didn't take it this much seriously, yet he
-                eventually realized that this girl seemed exactly like his angel
-                sent from above (he DEIFIED her).
+                Having found numerous goals in common, they gradually begin to
+                strengthen their familiarity by each day passing, although the
+                boy didn't take it this much seriously, yet he eventually
+                realized that this girl seemed exactly like his angel sent from
+                above (DEIFIED her).
                 <br />
                 <a
                   id="quote"

@@ -23,7 +23,7 @@ const Looks = () => {
             </picture>
             <p className="looks__text" data-aos="fade-left">
               James, a 35-years-old neurologist, exhausted because of the
-              lunatic patients that visit him daily, but still always optimistic
+              lunatic patients that visit him daily, yet still always optimistic
               and cheerful: trying his best to diagnose their case, thus make
               the world a better place&#128519;.
               <span className="left--arrow">&lt;-</span>
@@ -50,10 +50,10 @@ const Looks = () => {
               <img src="../images/old.jpg" />
             </picture>
             <p className="looks__text" data-aos="fade-left">
-              It's 2075, these two friends, having accomplished so many
-              achievements in their dream life, gather again and enjoy dinner
-              together; against all odds still united thanks to the pact they
-              made to remain friends forever&#128515;.
+              It's 2075, having accomplished so many achievements in their dream
+              life, they gather again and enjoy dinner together; against all
+              odds still united due to their sturdy inextricable
+              friendship&#128515;.
               <span className="left--arrow">&lt;-</span>
             </p>
           </div>
