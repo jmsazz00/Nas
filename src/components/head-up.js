@@ -34,6 +34,8 @@ function HeadUp(props) {
           ticking = true;
         }
         lastScrollTop = st <= 0 ? 0 : show ? st + 0.01 : st;
+        // for some reason the event fires 2 times, so to make it true 2 times
+        // we set the lastScroll slightly higher than st because it will equal it
       },
       true
     );
