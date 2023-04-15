@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 function HeadUp(props) {
-  let div = document.getElementById("head-up");
   let lastKnownScrollPosition = 0,
     lastScrollTop = 0;
 
@@ -9,6 +8,7 @@ function HeadUp(props) {
     let ticking = false;
 
     function doSmthg(show) {
+      let div = document.getElementById("head-up");
       if (show) div.style.opacity = "1";
       else div.style.opacity = "0";
     }
@@ -18,9 +18,10 @@ function HeadUp(props) {
       () => {
         lastKnownScrollPosition = window.scrollY;
         let st = document.documentElement.scrollTop;
+        let show;
 
         if (!ticking) {
-          let show =
+          show =
             lastKnownScrollPosition > window.innerHeight && st < lastScrollTop;
           console.log(show);
           window.requestAnimationFrame(() => {
@@ -32,7 +33,7 @@ function HeadUp(props) {
 
           ticking = true;
         }
-        lastScrollTop = st <= 0 ? 0 : st;
+        lastScrollTop = st <= 0 ? 0 : show ? st + 0.01 : st;
       },
       true
     );
