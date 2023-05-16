@@ -874,7 +874,7 @@ audio::-webkit-media-controls-panel {
 
 .arrow {
   position: absolute;
-  left: 42%;
+  left: 50;
   bottom: -45vh;
   fill: gold;
 }
